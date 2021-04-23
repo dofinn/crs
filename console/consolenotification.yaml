@@ -1,0 +1,10 @@
+apiVersion: console.openshift.io/v1
+kind: ConsoleNotification
+metadata:
+ name: test
+spec:
+ text: This is some testing text
+ location: BannerTop ##Other options are BannerBottom, BannerTopBottom
+ href: 'https://www.checkyotokens.com'
+ color: '#fff'
+ backgroundColor: purple
