@@ -1,0 +1,17 @@
+# error: unable to retrieve the complete list of server APIs: webhook.certmanager.k8s.io/v1beta1: the server is currently unable to handle the request
+apiVersion: apiregistration.k8s.io/v1
+kind: APIService
+metadata:
+  annotations:
+  labels:
+    app: cert-manager-webhook
+  name: v1beta1.webhook.certmanager.k8s.io
+spec:
+  group: webhook.certmanager.k8s.io
+  groupPriorityMinimum: 1000
+  service:
+    name: cert-manager-webhook
+    namespace: dont-exist
+    port: 443
+  version: v1beta1
+  versionPriority: 15
